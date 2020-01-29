@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Focus test</title>
+</head>
+<body>
+    <form action="#" name="form1" onsubmit="required()">
+        Please enter the following details:
+        <p>
+            Phone:
+            <input type="tel" id="tele" name="tele" />
+        </p>
+        <p>
+            Email:
+            <input type="text" id="mail" name="mail" />
+        </p>
+        <p>
+            <input type="submit" value="Submit" name="submit">
+        </p>
+    </form>
+
+    <script type="text/javascript">
+
+      window.onload = function() {
+  document.getElementById("tele").focus();
+};
+      
+      function required()  {
+        var telval=document.form1.tele.value;
+        var mailval=document.form1.mail.value;
+
+        if ((mailval == "") && (telval == ""))
+        {
+           alert("you must enter a phone number or an email address");
+           document.form1.tele.focus();
+           return false;
+        }
+         else
+         {
+           return true;
+        }
+        }
+    </script>
+</body>
+</html>
