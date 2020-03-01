@@ -1,4 +1,4 @@
-var word = "at";
+var word = "love";
 
 
 
@@ -24,4 +24,6 @@ function getPermutations(string){
 	return results;
 }
 
-getPermutations(word);
+var result = getPermutations(word);
+
+console.log(result)
