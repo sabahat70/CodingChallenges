@@ -14,11 +14,11 @@ function getPermutations(string){
 
 	for (var i = 0; i < string.length ; i++){
 
-		var fchar = string[i];//console.log("fchar:" +fchar);
-		var charsLeft = string.substr(0,i) + string.substr(i+1);//console.log("charsLeft:" +charsLeft);
-		var innerPermutations = getPermutations(charsLeft); //console.log("inner:" +innerPermutations);
+		var fchar = string[i];console.log("fchar:" +fchar+i);
+		var charsLeft = string.substr(0,i) + string.substr(i+1);console.log("charsLeft:" +charsLeft);
+		var innerPermutations = getPermutations(charsLeft); console.log("inner:" +innerPermutations);
 		for(var j = 0; j < innerPermutations.length ; j++){
-			results.push(fchar + innerPermutations[j]); //console.log(results);
+			results.push(fchar + innerPermutations[j]); console.log(results);
 		}
 	}
 	return results;
